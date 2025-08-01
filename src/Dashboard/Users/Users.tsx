@@ -61,11 +61,10 @@ const Users = () => {
           </CardContent>
         ) : user ? (
           <CardContent className="p-6">
-            {/* Header Section */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-6">
               <Avatar
                 sx={{ width: 80, height: 80 }}
-                src={`https://i.pravatar.cc/150?img=${user.id+4}`}
+                src={`https://i.pravatar.cc/150?img=${user.id+4 }`}
                 alt={user.name}
               />
               <div>
@@ -82,10 +81,7 @@ const Users = () => {
             </div>
 
             <Divider className="my-4" />
-
-            {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Left Column */}
               <div className="space-y-4">
                 <div className="flex items-start">
                   <EmailIcon color="primary" className="mr-3 mt-1" />
@@ -100,34 +96,6 @@ const Users = () => {
                     </Typography>
                   </div>
                 </div>
-
-                <div className="flex items-start">
-                  <PhoneIcon color="primary" className="mr-3 mt-1" />
-                  <div>
-                    <Typography variant="subtitle2" color="textSecondary">
-                      Phone
-                    </Typography>
-                    <Typography variant="body1">
-                      {user.phone}
-                    </Typography>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <LanguageIcon color="primary" className="mr-3 mt-1" />
-                  <div>
-                    <Typography variant="subtitle2" color="textSecondary">
-                      Website
-                    </Typography>
-                    <Typography variant="body1">
-                      {user.website}
-                    </Typography>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column */}
-              <div className="space-y-4">
                 <div className="flex items-start">
                   <HomeIcon color="primary" className="mr-3 mt-1" />
                   <div>
@@ -141,6 +109,32 @@ const Users = () => {
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
                       (Lat: {user.address.geo.lat}, Lng: {user.address.geo.lng})
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <PhoneIcon color="primary" className="mr-3 mt-1" />
+                  <div className='w-full'>
+                    <Typography variant="subtitle2" color="textSecondary">
+                      Phone
+                    </Typography>
+                    <Typography variant="body1">
+                      {user.phone}
+                    </Typography>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <LanguageIcon color="primary" className="mr-3 mt-1" />
+                  <div className='w-full'>
+                    <Typography variant="subtitle2" color="textSecondary">
+                      Website
+                    </Typography>
+                    <Typography variant="body1">
+                      {user.website}
                     </Typography>
                   </div>
                 </div>
