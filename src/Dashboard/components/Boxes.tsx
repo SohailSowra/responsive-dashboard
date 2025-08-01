@@ -34,7 +34,7 @@ const Boxes = ({ filteredUsers }: { filteredUsers: User[] }) => {
           <CardContent sx={{ flexGrow: 1 }}>
             <Box display="flex" alignItems="center" mb={2}>
               <Avatar 
-                src={`https://i.pravatar.cc/150?img=${user.id+3}`}
+                src={`https://i.pravatar.cc/150?img=${user.id+4}`}
                 sx={{ width: 56, height: 56, mr: 2 }}
               />
               <div>
