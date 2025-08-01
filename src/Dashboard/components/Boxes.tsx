@@ -29,11 +29,6 @@ const Boxes = ({ filteredUsers }: { filteredUsers: User[] }) => {
             height: '100%',
             display: 'flex',
             flexDirection: 'column',
-            transition: 'transform 0.2s, box-shadow 0.2s',
-            '&:hover': {
-              transform: 'translateY(-4px)',
-              boxShadow: theme.shadows[6]
-            }
           }}
         >
           <CardContent sx={{ flexGrow: 1 }}>
